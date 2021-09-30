@@ -21,7 +21,7 @@ after_success:
   - docker push sonupatel10906997/multi-server
   - docker push sonupatel10906997/multi-worker
 
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "multi-docker"
