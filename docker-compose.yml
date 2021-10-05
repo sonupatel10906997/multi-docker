@@ -24,12 +24,13 @@ services:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
+    depends_on:
+      - api
+      - client
     image: "sonupatel10906997/multi-nginx"
     mem_limit: 128m
     hostname: nginx
     ports:
       - "80:80"
-    depends_on:
-      - api
-      - client
+    
 
