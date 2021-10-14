@@ -11,7 +11,7 @@ script:
 after_success:
   - docker build -t sonupatel10906997/multi-client ./client
   - docker build -t sonupatel10906997/multi-nginx ./nginx
-  - docker build -t sonupatel10906997/multi-server ./nginx
+  - docker build -t sonupatel10906997/multi-server ./server
   - docker build -t sonupatel10906997/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
